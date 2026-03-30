@@ -21,6 +21,7 @@
     --gray-soft: #6b7c7c;
     --border-light: #e9dfce;
     --shadow: 0 12px 30px rgba(0,0,0,0.05);
+    --shadow-hover: 0 20px 35px -12px rgba(0,0,0,0.1);
     --radius: 24px;
   }
 
@@ -38,14 +39,13 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Elegant Container */
   .container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 2rem;
   }
 
-  /* Navigation - refined & timeless */
+  /* Navigation */
   .top-bar {
     background: white;
     border-bottom: 1px solid var(--border-light);
@@ -168,7 +168,7 @@
     box-shadow: 0 4px 12px rgba(181, 139, 60, 0.3);
   }
 
-  /* Hero Section */
+  /* Hero */
   .hero {
     background: linear-gradient(120deg, #ffffff 0%, var(--cream) 100%);
     padding: 5rem 2rem;
@@ -220,7 +220,6 @@
     font-weight: 500;
   }
 
-  /* Button Group */
   .button-group {
     display: flex;
     gap: 1rem;
@@ -264,7 +263,6 @@
     color: white;
   }
 
-  /* Section Styles */
   section {
     padding: 5rem 0;
     border-bottom: 1px solid var(--border-light);
@@ -286,12 +284,12 @@
     font-size: 1rem;
   }
 
-  /* About Grid with Optimized Image Size */
+  /* About Section - Full Image Properly Sized */
   .about-grid {
     display: grid;
-    grid-template-columns: 1fr 0.8fr;
+    grid-template-columns: 1fr 0.7fr;
     gap: 3rem;
-    align-items: start;
+    align-items: center;
   }
 
   .about-content p {
@@ -302,19 +300,22 @@
 
   .about-image {
     width: 100%;
-    border-radius: 24px;
+    border-radius: 28px;
     overflow: hidden;
     box-shadow: var(--shadow);
     background: #f5ede0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .about-image img {
     width: 100%;
     height: auto;
-    max-height: 420px;
-    object-fit: cover;
+    max-height: 480px;
+    object-fit: contain;
     display: block;
-    object-position: center top;
+    background: #f5ede0;
   }
 
   .credentials {
@@ -334,65 +335,122 @@
     color: var(--gold);
   }
 
-  /* Services Grid - Two Columns Elegant */
-  .services-grid {
+  /* Modern Redesigned Services Cards */
+  .services-modern {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
 
-  .service-block {
+  .service-elegant {
     background: white;
-    border-radius: 24px;
+    border-radius: 28px;
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    transition: all 0.35s cubic-bezier(0.2, 0, 0, 1);
     border: 1px solid var(--border-light);
-    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
   }
 
-  .service-block:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow);
+  .service-elegant::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
   }
 
-  .service-block h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 1rem;
-    border-left: 3px solid var(--gold);
-    padding-left: 1rem;
+  .service-elegant:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--gold-light);
   }
 
-  .service-list {
-    list-style: none;
+  .service-elegant:hover::before {
+    transform: scaleX(1);
   }
 
-  .service-list li {
-    padding: 0.6rem 0;
+  .service-header {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 0.9rem;
-    border-bottom: 1px solid rgba(0,0,0,0.03);
-    color: var(--charcoal);
+    gap: 12px;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(181, 139, 60, 0.2);
   }
 
-  .service-list li i {
+  .service-icon {
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, rgba(181, 139, 60, 0.1), rgba(181, 139, 60, 0.05));
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--gold);
+  }
+
+  .service-elegant h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 0;
+    letter-spacing: -0.3px;
+  }
+
+  .service-list-modern {
+    list-style: none;
+    margin-top: 0.5rem;
+  }
+
+  .service-list-modern li {
+    padding: 0.7rem 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: var(--charcoal);
+    border-bottom: 1px dashed rgba(0,0,0,0.05);
+    transition: all 0.2s;
+  }
+
+  .service-list-modern li:hover {
+    transform: translateX(4px);
+    color: var(--gold);
+  }
+
+  .service-list-modern li i {
     color: var(--gold);
     width: 20px;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .service-tag {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 0.5px;
   }
 
   /* Widget Form */
   .widget-area {
-    background: var(--cream);
+    background: linear-gradient(135deg, var(--cream) 0%, white 100%);
     border-radius: 32px;
     padding: 2.5rem;
     text-align: center;
     margin: 2rem 0;
+    border: 1px solid var(--border-light);
   }
 
   .widget-area h3 {
@@ -400,6 +458,7 @@
     font-weight: 600;
     font-family: 'Cormorant Garamond', serif;
     margin-bottom: 0.5rem;
+    color: var(--navy);
   }
 
   .verification-form {
@@ -416,6 +475,12 @@
     text-align: center;
     margin-bottom: 1rem;
     background: white;
+    transition: border 0.2s;
+  }
+
+  .verification-form input:focus {
+    outline: none;
+    border-color: var(--gold);
   }
 
   /* Contact & Payment Row */
@@ -431,6 +496,12 @@
     border-radius: 24px;
     padding: 2rem;
     border: 1px solid var(--border-light);
+    transition: all 0.25s;
+  }
+
+  .info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
   }
 
   .payment-btn {
@@ -499,7 +570,7 @@
   }
 
   @media (max-width: 900px) {
-    .about-grid, .services-grid, .info-row {
+    .about-grid, .services-modern, .info-row {
       grid-template-columns: 1fr;
     }
     .container {
@@ -519,13 +590,21 @@
       gap: 1.5rem;
     }
     .about-image img {
-      max-height: 350px;
+      max-height: 380px;
     }
     .logo-mark {
       width: 56px;
       height: 56px;
     }
     .logo-text h1 {
+      font-size: 1.3rem;
+    }
+    .service-elegant h3 {
+      font-size: 1.4rem;
+    }
+    .service-icon {
+      width: 44px;
+      height: 44px;
       font-size: 1.3rem;
     }
   }
@@ -577,7 +656,7 @@
   </div>
 
   <div class="container">
-    <!-- About Teja Section with OPTIMIZED FULL SIZE PHOTO (smaller but elegant) -->
+    <!-- About Teja Section - FULL IMAGE visible top to bottom, smaller scale -->
     <section id="about">
       <div class="about-grid">
         <div class="about-content">
@@ -591,38 +670,46 @@
           </div>
         </div>
         <div class="about-image">
-          <img src="tejapic.jpeg" alt="Teja Shariff, CPA" onerror="this.src='https://placehold.co/500x400/e9dfce/1a2e3b?text=Teja+Shariff,+CPA'">
+          <img src="tejapic.jpeg" alt="Teja Shariff, CPA - Full Portrait" onerror="this.src='https://placehold.co/500x550/e9dfce/1a2e3b?text=Teja+Shariff,+CPA'">
         </div>
       </div>
     </section>
 
-    <!-- Core Tax & Accounting Services -->
+    <!-- Core Tax & Accounting Services - Modern Redesigned Style -->
     <section id="services">
       <h2 class="section-title">Core Tax & Accounting Services</h2>
       <p class="section-subtitle">Comprehensive solutions tailored to individuals, businesses, estates, and non-profits.</p>
-      <div class="services-grid">
-        <div class="service-block">
-          <h3>Tax Prep Services</h3>
-          <ul class="service-list">
+      <div class="services-modern">
+        <div class="service-elegant">
+          <div class="service-header">
+            <div class="service-icon"><i class="fas fa-file-invoice"></i></div>
+            <h3>Tax Prep Services</h3>
+          </div>
+          <ul class="service-list-modern">
             <li><i class="fas fa-chevron-right"></i> Individual, Partnership & Corporate Taxes</li>
-            <li><i class="fas fa-chevron-right"></i> S-Corps</li>
-            <li><i class="fas fa-chevron-right"></i> Estates & Trusts</li>
-            <li><i class="fas fa-chevron-right"></i> Gift Tax</li>
-            <li><i class="fas fa-chevron-right"></i> Private Foundations</li>
-            <li><i class="fas fa-chevron-right"></i> Tax-Exempts</li>
+            <li><i class="fas fa-chevron-right"></i> S-Corps — Form 1120-S & K-1s</li>
+            <li><i class="fas fa-chevron-right"></i> Estates & Trusts (Form 1041)</li>
+            <li><i class="fas fa-chevron-right"></i> Gift Tax (Form 709)</li>
+            <li><i class="fas fa-chevron-right"></i> Private Foundations (990-PF)</li>
+            <li><i class="fas fa-chevron-right"></i> Tax-Exempt Organizations (990/990-EZ)</li>
           </ul>
+          <div class="service-tag"><i class="fas fa-clock"></i> Year-round tax planning</div>
         </div>
-        <div class="service-block">
-          <h3>Core Accounting Services</h3>
-          <ul class="service-list">
+        <div class="service-elegant">
+          <div class="service-header">
+            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Core Accounting Services</h3>
+          </div>
+          <ul class="service-list-modern">
             <li><i class="fas fa-chevron-right"></i> Tax Preparation & Representation</li>
-            <li><i class="fas fa-chevron-right"></i> Bookkeeping</li>
-            <li><i class="fas fa-chevron-right"></i> Tax Consulting</li>
-            <li><i class="fas fa-chevron-right"></i> Business Bookkeeping</li>
-            <li><i class="fas fa-chevron-right"></i> Business Payroll</li>
-            <li><i class="fas fa-chevron-right"></i> Buying & Selling Business</li>
-            <li><i class="fas fa-chevron-right"></i> Management Advisory</li>
+            <li><i class="fas fa-chevron-right"></i> Bookkeeping — Personal & Business</li>
+            <li><i class="fas fa-chevron-right"></i> Tax Consulting & Strategic Planning</li>
+            <li><i class="fas fa-chevron-right"></i> Business Bookkeeping & Financial Statements</li>
+            <li><i class="fas fa-chevron-right"></i> Business Payroll & Quarterly Filings</li>
+            <li><i class="fas fa-chevron-right"></i> Buying & Selling Business Advisory</li>
+            <li><i class="fas fa-chevron-right"></i> Management Advisory & CFO Services</li>
           </ul>
+          <div class="service-tag"><i class="fas fa-handshake"></i> Personalized guidance</div>
         </div>
       </div>
     </section>
@@ -717,14 +804,14 @@
     });
   });
 
-  // Handle image fallbacks and ensure logo visibility
+  // Handle image fallbacks
   const logoImg = document.querySelector('.logo-mark img');
   if (logoImg && logoImg.complete && logoImg.naturalWidth === 0) {
     logoImg.src = 'https://placehold.co/68x68/1a2e3b/b58b3c?text=TS';
   }
   const tejaImg = document.querySelector('.about-image img');
   if (tejaImg && tejaImg.complete && tejaImg.naturalWidth === 0) {
-    tejaImg.src = 'https://placehold.co/500x400/e9dfce/1a2e3b?text=Teja+Shariff,+CPA';
+    tejaImg.src = 'https://placehold.co/500x550/e9dfce/1a2e3b?text=Teja+Shariff,+CPA';
   }
 </script>
 </body>
