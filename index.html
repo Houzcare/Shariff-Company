@@ -14,6 +14,7 @@
     --cream: #fef7e8;
     --navy: #1a2e3b;
     --gold: #b58b3c;
+    --gold-dark: #9b6e2c;
     --gold-light: #d4af6a;
     --pearl: #faf6ed;
     --charcoal: #2c3e3f;
@@ -89,29 +90,28 @@
   }
 
   .logo-mark {
-    width: 52px;
-    height: 52px;
+    width: 68px;
+    height: 68px;
     background: var(--navy);
-    border-radius: 12px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--gold);
-    font-family: 'Cormorant Garamond', serif;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
 
   .logo-mark img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 12px;
+    display: block;
   }
 
   .logo-text h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: -0.2px;
     color: var(--navy);
@@ -120,10 +120,11 @@
   }
 
   .logo-text p {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     color: var(--gold);
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.5px;
+    margin-top: 4px;
   }
 
   .nav-links {
@@ -146,19 +147,25 @@
   }
 
   .nav-cta {
-    background: var(--navy);
+    background: var(--gold);
     color: white;
-    padding: 0.6rem 1.5rem;
+    padding: 0.7rem 1.6rem;
     border-radius: 40px;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 0.85rem;
+    font-weight: 600;
+    font-size: 0.9rem;
     transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .nav-cta:hover {
-    background: var(--gold);
-    color: var(--navy);
+    background: var(--gold-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(181, 139, 60, 0.3);
   }
 
   /* Hero Section */
@@ -279,11 +286,11 @@
     font-size: 1rem;
   }
 
-  /* About Grid with Full Image */
+  /* About Grid with Optimized Image Size */
   .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 3rem;
     align-items: start;
   }
 
@@ -298,13 +305,16 @@
     border-radius: 24px;
     overflow: hidden;
     box-shadow: var(--shadow);
+    background: #f5ede0;
   }
 
   .about-image img {
     width: 100%;
     height: auto;
-    display: block;
+    max-height: 420px;
     object-fit: cover;
+    display: block;
+    object-position: center top;
   }
 
   .credentials {
@@ -424,7 +434,7 @@
   }
 
   .payment-btn {
-    background: #0070ba;
+    background: var(--gold);
     color: white;
     border: none;
     padding: 12px 24px;
@@ -439,7 +449,8 @@
   }
 
   .payment-btn:hover {
-    background: #003087;
+    background: var(--gold-dark);
+    transform: translateY(-1px);
   }
 
   /* Footer */
@@ -504,6 +515,19 @@
     .hero {
       padding: 3rem 1.5rem;
     }
+    .about-grid {
+      gap: 1.5rem;
+    }
+    .about-image img {
+      max-height: 350px;
+    }
+    .logo-mark {
+      width: 56px;
+      height: 56px;
+    }
+    .logo-text h1 {
+      font-size: 1.3rem;
+    }
   }
 </style>
 </head>
@@ -518,7 +542,7 @@
 <nav>
   <div class="logo-area">
     <div class="logo-mark">
-      <img src="tega-logo.jpeg" alt="Shariff & Company Logo" onerror="this.src='https://placehold.co/52x52/1a2e3b/b58b3c?text=TS'">
+      <img src="tega-logo.jpeg" alt="Shariff & Company Logo" onerror="this.src='https://placehold.co/68x68/1a2e3b/b58b3c?text=TS'">
     </div>
     <div class="logo-text">
       <h1>Shariff & Company, LLC</h1>
@@ -530,7 +554,7 @@
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
-    <a href="#" class="nav-cta" onclick="openPayment(); return false;">Make a Secure Payment</a>
+    <a href="#" class="nav-cta" onclick="openPayment(); return false;"><i class="fas fa-lock"></i> Make a Secure Payment</a>
   </div>
 </nav>
 
@@ -553,7 +577,7 @@
   </div>
 
   <div class="container">
-    <!-- About Teja Section with FULL SIZE PHOTO -->
+    <!-- About Teja Section with OPTIMIZED FULL SIZE PHOTO (smaller but elegant) -->
     <section id="about">
       <div class="about-grid">
         <div class="about-content">
@@ -567,7 +591,7 @@
           </div>
         </div>
         <div class="about-image">
-          <img src="tejapic.jpeg" alt="Teja Shariff, CPA" onerror="this.src='https://placehold.co/600x500/e9dfce/1a2e3b?text=Teja+Shariff,+CPA'">
+          <img src="tejapic.jpeg" alt="Teja Shariff, CPA" onerror="this.src='https://placehold.co/500x400/e9dfce/1a2e3b?text=Teja+Shariff,+CPA'">
         </div>
       </div>
     </section>
@@ -693,14 +717,14 @@
     });
   });
 
-  // Handle image fallbacks
+  // Handle image fallbacks and ensure logo visibility
   const logoImg = document.querySelector('.logo-mark img');
   if (logoImg && logoImg.complete && logoImg.naturalWidth === 0) {
-    logoImg.src = 'https://placehold.co/52x52/1a2e3b/b58b3c?text=TS';
+    logoImg.src = 'https://placehold.co/68x68/1a2e3b/b58b3c?text=TS';
   }
   const tejaImg = document.querySelector('.about-image img');
   if (tejaImg && tejaImg.complete && tejaImg.naturalWidth === 0) {
-    tejaImg.src = 'https://placehold.co/600x500/e9dfce/1a2e3b?text=Teja+Shariff,+CPA';
+    tejaImg.src = 'https://placehold.co/500x400/e9dfce/1a2e3b?text=Teja+Shariff,+CPA';
   }
 </script>
 </body>
