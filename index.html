@@ -2,705 +2,605 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Shariff & Company, LLC | Teja Shariff, CPA – Trusted Accounting Since 1989</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>Shariff & Company, LLC | Teja Shariff, CPA – Elegant Accounting</title>
 <meta name="description" content="Shariff & Company, LLC offers personalized accounting, tax planning, and consulting services. Teja Shariff, CPA – over 35 years of experience. Based in Branford, CT.">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
-:root {
-  --navy: #1a2c3e;
-  --gold: #c7a44b;
-  --gold-light: #e5d5b0;
-  --cream: #fef9f0;
-  --offwhite: #ffffff;
-  --gray: #5a6b7a;
-  --light-gray: #f5f2ed;
-  --border-light: #e8e2d8;
-  --shadow-sm: 0 4px 12px rgba(0,0,0,0.03);
-  --shadow-md: 0 8px 24px rgba(0,0,0,0.05);
-  --radius: 4px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--offwhite);
-  color: var(--navy);
-  line-height: 1.55;
-}
-
-h1, h2, h3, h4, .logo, .nav-links a, .btn, .section-title {
-  font-family: 'Cormorant Garamond', serif;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-/* Header & Navigation */
-header {
-  background: white;
-  border-bottom: 1px solid var(--border-light);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255,255,255,0.96);
-  backdrop-filter: blur(4px);
-}
-
-.header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.logo-img {
-  width: 60px;
-  height: 60px;
-  background: var(--navy);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-  font-size: 1.6rem;
-  font-weight: 700;
-  font-family: 'Cormorant Garamond', serif;
-  box-shadow: var(--shadow-sm);
-}
-
-.logo-text h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  color: var(--navy);
-  line-height: 1.2;
-}
-
-.logo-text p {
-  font-size: 0.8rem;
-  color: var(--gold);
-  letter-spacing: 1px;
-  font-weight: 500;
-}
-
-.contact-header {
-  text-align: right;
-  font-size: 0.85rem;
-  color: var(--gray);
-}
-
-.contact-header a {
-  color: var(--navy);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.contact-header a:hover {
-  color: var(--gold);
-}
-
-nav {
-  background: var(--navy);
-  padding: 0.9rem 2rem;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  transition: color 0.2s;
-  font-family: 'Inter', sans-serif;
-}
-
-.nav-links a:hover {
-  color: var(--gold-light);
-}
-
-/* Main Content */
-main {
-  background: var(--offwhite);
-}
-
-.hero {
-  background: linear-gradient(135deg, var(--cream) 0%, #fff6ea 100%);
-  padding: 4rem 2rem;
-  text-align: center;
-  border-bottom: 1px solid var(--border-light);
-}
-
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero h2 {
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: var(--navy);
-  margin-bottom: 1rem;
-  letter-spacing: -0.2px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  color: var(--gray);
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-}
-
-.hero-highlight {
-  font-style: italic;
-  font-size: 1.15rem;
-  border-left: 3px solid var(--gold);
-  padding-left: 1.5rem;
-  margin: 1.5rem auto;
-  max-width: 600px;
-  color: var(--navy);
-  font-weight: 500;
-}
-
-/* Section Styles */
-section {
-  padding: 4rem 0;
-  border-bottom: 1px solid var(--border-light);
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--navy);
-  margin-bottom: 1rem;
-  letter-spacing: -0.2px;
-  position: relative;
-  display: inline-block;
-}
-
-.section-title:after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 60px;
-  height: 2px;
-  background: var(--gold);
-}
-
-.text-center .section-title:after {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.text-center {
-  text-align: center;
-}
-
-.section-subhead {
-  color: var(--gray);
-  max-width: 700px;
-  margin: 1rem auto 2rem;
-  font-size: 1rem;
-}
-
-/* About Section */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
-  margin-top: 1.5rem;
-}
-
-.about-text p {
-  margin-bottom: 1.2rem;
-  color: var(--gray);
-  line-height: 1.7;
-}
-
-.cpa-card {
-  background: var(--cream);
-  padding: 1.8rem;
-  border-radius: 12px;
-  border-left: 4px solid var(--gold);
-}
-
-.cpa-card h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: var(--navy);
-}
-
-.cpa-card .badge {
-  display: inline-block;
-  background: var(--gold);
-  color: white;
-  padding: 0.2rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.cpa-card p {
-  color: var(--gray);
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.cpa-card .membership {
-  font-size: 0.85rem;
-  color: var(--navy);
-  margin-top: 1rem;
-  padding-top: 0.8rem;
-  border-top: 1px solid rgba(0,0,0,0.05);
-}
-
-/* Services Grid (Classy Two-Column Layout) */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
-  margin-top: 2rem;
-}
-
-.service-category {
-  background: var(--light-gray);
-  padding: 1.8rem;
-  border-radius: 12px;
-  transition: all 0.2s;
-}
-
-.service-category:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-}
-
-.service-category h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--navy);
-  margin-bottom: 1.2rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--gold);
-  display: inline-block;
-}
-
-.service-list {
-  list-style: none;
-  margin-top: 0.8rem;
-}
-
-.service-list li {
-  padding: 0.6rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.95rem;
-  color: var(--gray);
-}
-
-.service-list li i {
-  color: var(--gold);
-  font-size: 0.8rem;
-  width: 20px;
-}
-
-/* Widget / Form Section */
-.widget-section {
-  background: var(--cream);
-  margin: 2rem 0;
-  border-radius: 16px;
-  padding: 2rem;
-  text-align: center;
-}
-
-.widget-title {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: var(--navy);
-}
-
-.verification-form {
-  max-width: 400px;
-  margin: 0 auto;
-  background: white;
-  padding: 1.8rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow-sm);
-}
-
-.verification-form label {
-  display: block;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: var(--navy);
-}
-
-.verification-form input {
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid var(--border-light);
-  border-radius: 8px;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.btn-submit {
-  background: var(--navy);
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background 0.2s;
-  font-family: 'Inter', sans-serif;
-}
-
-.btn-submit:hover {
-  background: var(--gold);
-  color: var(--navy);
-}
-
-/* Footer */
-footer {
-  background: var(--navy);
-  color: #e0e4e8;
-  padding: 2.5rem 2rem 1.5rem;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.footer-info h3 {
-  font-size: 1.2rem;
-  color: var(--gold);
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.footer-info p {
-  font-size: 0.85rem;
-  opacity: 0.8;
-  margin: 0.25rem 0;
-}
-
-.footer-links {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.footer-links a {
-  color: #e0e4e8;
-  text-decoration: none;
-  font-size: 0.85rem;
-  transition: color 0.2s;
-}
-
-.footer-links a:hover {
-  color: var(--gold);
-}
-
-.footer-copyright {
-  text-align: center;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  font-size: 0.75rem;
-  opacity: 0.7;
-}
-
-/* Buttons & Links */
-.btn-outline {
-  display: inline-block;
-  padding: 10px 24px;
-  border: 1px solid var(--gold);
-  color: var(--navy);
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 500;
-  transition: all 0.2s;
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-}
-
-.btn-outline:hover {
-  background: var(--gold);
-  color: white;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .header-top {
-    flex-direction: column;
-    text-align: center;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  .contact-header {
-    text-align: center;
-  }
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 1.8rem;
-  }
-  .nav-links {
-    gap: 1.2rem;
-  }
-  .container {
-    padding: 0 1.5rem;
-  }
-  .hero h2 {
-    font-size: 1.8rem;
-  }
-}
 
-@media (max-width: 600px) {
-  .logo-area {
-    flex-direction: column;
-    text-align: center;
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #fafafc;
+    color: #1c1c1e;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
   }
-  .logo-img {
+
+  /* iPhone 17 Kiosk Style - glassmorphic, large buttons, rounded */
+  .kiosk-container {
+    max-width: 1280px;
     margin: 0 auto;
+    padding: 1.5rem;
   }
-  .section-title {
-    font-size: 1.6rem;
+
+  /* Glassmorphic Nav */
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.8rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
   }
-}
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background: #1c3e3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .logo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .logo-text h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: #1c1c1e;
+  }
+
+  .logo-text p {
+    font-size: 0.7rem;
+    color: #8e8e93;
+  }
+
+  .nav-buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-btn {
+    padding: 8px 20px;
+    border-radius: 30px;
+    background: transparent;
+    border: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #1c1c1e;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .nav-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-btn.primary {
+    background: #007aff;
+    color: white;
+  }
+
+  .nav-btn.primary:hover {
+    background: #005fcb;
+  }
+
+  /* Hero Kiosk Section */
+  .hero-kiosk {
+    background: linear-gradient(135deg, #f5f5fa 0%, #ffffff 100%);
+    border-radius: 48px;
+    margin: 1.5rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.02);
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(0, 122, 255, 0.1);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #007aff;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-kiosk h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #1c1c1e;
+    margin-bottom: 1rem;
+  }
+
+  .hero-highlight {
+    font-size: 1.2rem;
+    color: #3a3a3e;
+    max-width: 600px;
+    margin: 1rem auto;
+    font-weight: 500;
+  }
+
+  /* Large Kiosk Buttons */
+  .kiosk-button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .kiosk-btn {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 1rem 2rem;
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .kiosk-btn i {
+    font-size: 1.1rem;
+  }
+
+  .kiosk-btn:hover {
+    transform: scale(0.98);
+    background: #f9f9fb;
+    border-color: #007aff;
+  }
+
+  /* About Section with Photo */
+  .about-section {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 3rem;
+    align-items: start;
+    background: white;
+    border-radius: 40px;
+    padding: 2rem;
+    margin: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  }
+
+  .about-text p {
+    color: #3a3a3e;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .cpa-photo-card {
+    background: #f9f9fc;
+    border-radius: 32px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .photo-frame {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+    background: #e9ecef;
+    border: 3px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cpa-photo-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .cpa-photo-card .badge {
+    display: inline-block;
+    background: #007aff10;
+    color: #007aff;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+  }
+
+  .membership {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #5e5e66;
+    border-top: 1px solid #e9ecef;
+    padding-top: 1rem;
+  }
+
+  /* Services Grid - Elegant Cards */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+    margin: 1.5rem;
+  }
+
+  .service-card {
+    background: white;
+    border-radius: 32px;
+    padding: 1.8rem;
+    transition: all 0.2s;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+  }
+
+  .service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 122, 255, 0.2);
+  }
+
+  .service-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #007aff;
+    display: inline-block;
+  }
+
+  .service-list {
+    list-style: none;
+  }
+
+  .service-list li {
+    padding: 0.6rem 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    font-size: 0.9rem;
+    color: #3a3a3e;
+  }
+
+  .service-list li i {
+    color: #007aff;
+    width: 20px;
+    font-size: 0.8rem;
+  }
+
+  /* Widget Form */
+  .widget-card {
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+    border-radius: 40px;
+    margin: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .widget-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .verification-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    padding: 1.8rem;
+    border-radius: 32px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  }
+
+  .verification-form input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 60px;
+    border: 1px solid #e5e5ea;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .btn-submit {
+    background: #007aff;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 60px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s;
+  }
+
+  .btn-submit:hover {
+    background: #005fcb;
+    transform: scale(0.98);
+  }
+
+  /* Payment & Contact Row */
+  .dual-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 1.5rem;
+  }
+
+  .panel {
+    background: white;
+    border-radius: 32px;
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .payment-btn {
+    background: #007aff;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Footer */
+  .footer-glass {
+    background: #1c1c1e;
+    color: #e5e5ea;
+    border-radius: 32px 32px 0 0;
+    margin-top: 2rem;
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-copyright {
+    text-align: center;
+    font-size: 0.75rem;
+    opacity: 0.7;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+  }
+
+  @media (max-width: 850px) {
+    .about-section, .services-grid, .dual-panel {
+      grid-template-columns: 1fr;
+    }
+    .hero-kiosk h2 {
+      font-size: 2rem;
+    }
+    .glass-nav {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+    }
+    .nav-buttons {
+      justify-content: center;
+    }
+  }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="header-top">
-    <div class="logo-area">
-      <div class="logo-img">TS</div>
-      <div class="logo-text">
-        <h1>Shariff & Company, LLC</h1>
-        <p>Teja Shariff, CPA</p>
-      </div>
+<div class="glass-nav">
+  <div class="logo-area">
+    <div class="logo-img">
+      <img src="tega-logo.jpeg" alt="Shariff & Company Logo" onerror="this.src='https://placehold.co/48x48/1c3e3a/white?text=TS'">
     </div>
-    <div class="contact-header">
-      <i class="fas fa-phone-alt" style="margin-right: 6px; color: var(--gold);"></i> (203) 240-1888<br>
-      <i class="fas fa-map-marker-alt" style="margin-right: 6px; color: var(--gold);"></i> 288 East Main Street, Branford, CT 06405<br>
-      <i class="fas fa-envelope" style="margin-right: 6px; color: var(--gold);"></i> <a href="mailto:teja@tejacpa.com">teja@tejacpa.com</a>
+    <div class="logo-text">
+      <h1>Shariff & Company, LLC</h1>
+      <p>Teja Shariff, CPA</p>
     </div>
   </div>
-  <nav>
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#about">About the Firm</a>
-      <a href="#services">Core Tax & Accounting Services</a>
-      <a href="#contact">Contact Us</a>
-      <a href="#payment">Make a Secure Payment</a>
-    </div>
-  </nav>
-</header>
+  <div class="nav-buttons">
+    <button class="nav-btn" onclick="scrollToSection('home')">Home</button>
+    <button class="nav-btn" onclick="scrollToSection('about')">About the Firm</button>
+    <button class="nav-btn" onclick="scrollToSection('services')">Core Services</button>
+    <button class="nav-btn" onclick="scrollToSection('contact')">Contact</button>
+    <button class="nav-btn primary" onclick="openPayment()">Make a Secure Payment</button>
+  </div>
+</div>
 
-<main>
-  <!-- Welcome Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Welcome</h2>
-      <p>Are you looking for a firm large enough to offer a full array of accounting, taxation, and consulting services, but small enough to know you on a personal level?</p>
-      <div class="hero-highlight">
-        Look no further. You've found the right accountant!
-      </div>
-      <p>Whether you need accounting, tax planning, tax return preparation, personal financial planning, estate and trust, small business consulting, or a full complement of individualized services, we will give you the full resources you would expect only from a large accounting firm while maintaining a personal touch.</p>
+<div class="kiosk-container" id="home">
+  <!-- Hero Kiosk Section -->
+  <div class="hero-kiosk">
+    <div class="hero-badge"><i class="fas fa-star" style="margin-right: 6px;"></i> Over 35 Years of Excellence</div>
+    <h2>Welcome — You've Found the Right Accountant</h2>
+    <div class="hero-highlight">
+      A firm large enough to offer a full array of services, yet small enough to know you personally.
     </div>
-  </section>
+    <div class="kiosk-button-grid">
+      <button class="kiosk-btn" onclick="scrollToSection('services')"><i class="fas fa-chart-line"></i> Tax Services</button>
+      <button class="kiosk-btn" onclick="scrollToSection('contact')"><i class="fas fa-calendar-check"></i> Request Consultation</button>
+      <button class="kiosk-btn" onclick="openPayment()"><i class="fas fa-lock"></i> Secure Payment</button>
+    </div>
+  </div>
 
-  <!-- About Teja Shariff -->
-  <div class="container" id="about">
-    <section>
-      <div class="about-grid">
-        <div class="about-text">
-          <h2 class="section-title">About Teja Shariff, CPA</h2>
-          <p>Mr. Shariff has been in practice for over thirty-five years and brings a wealth of knowledge and experience. His dedication to client service and technical excellence has made Shariff & Company, LLC a trusted name throughout Connecticut.</p>
-          <p>Teja's approach combines traditional values with modern strategies, ensuring that every client receives personalized attention and forward-thinking solutions. Whether you are an individual seeking tax planning or a business owner navigating complex financial decisions, Teja provides the guidance and expertise you need.</p>
-          <a href="#services" class="btn-outline"><i class="fas fa-arrow-right"></i> Explore Core Services</a>
-        </div>
-        <div class="cpa-card">
-          <div class="badge">CPA · Over 35 Years Experience</div>
-          <h3>Teja Shariff, CPA</h3>
-          <p>Mr. Shariff has been in practice for over thirty five years and brings a wealth of knowledge and experience.</p>
-          <p>Click for more information about Mr. Shariff.</p>
-          <p>Click for more information about the core tax and accounting services offered by Shariff & Company, LLC</p>
-          <div class="membership">
-            <i class="fas fa-check-circle" style="color: var(--gold); margin-right: 6px;"></i> Member, American Institute of Certified Public Accountants (AICPA)<br>
-            <i class="fas fa-check-circle" style="color: var(--gold); margin-right: 6px;"></i> Member, Connecticut Society of Certified Public Accountants (CTCPA)
-          </div>
-        </div>
+  <!-- About Teja Section with Photo -->
+  <div class="about-section" id="about">
+    <div class="about-text">
+      <h2 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem;">About Teja Shariff, CPA</h2>
+      <p>Mr. Shariff has been in practice for over thirty-five years and brings a wealth of knowledge and experience. His dedication to client service and technical excellence has made Shariff & Company, LLC a trusted name throughout Connecticut.</p>
+      <p>Teja's approach combines traditional values with modern strategies, ensuring that every client receives personalized attention and forward-thinking solutions. Whether you are an individual seeking tax planning or a business owner navigating complex financial decisions, Teja provides the guidance and expertise you need.</p>
+      <p>Teja is a member of the American Institute of Certified Public Accountants and a member of the Connecticut Society of Certified Public Accountants.</p>
+      <button class="kiosk-btn" style="margin-top: 1rem;" onclick="scrollToSection('services')"><i class="fas fa-arrow-right"></i> Explore Core Services</button>
+    </div>
+    <div class="cpa-photo-card">
+      <div class="photo-frame">
+        <img src="tejapic.jpeg" alt="Teja Shariff, CPA" onerror="this.src='https://placehold.co/160x160/e9ecef/1c3e3a?text=Teja+Shariff'">
       </div>
-    </section>
+      <h3>Teja Shariff, CPA</h3>
+      <div class="badge">Over 35 Years Experience</div>
+      <p style="margin: 0.8rem 0; font-size: 0.9rem;">Member, AICPA & CTCPA</p>
+      <div class="membership">
+        <i class="fas fa-certificate"></i> American Institute of CPAs<br>
+        <i class="fas fa-certificate"></i> Connecticut Society of CPAs
+      </div>
+    </div>
   </div>
 
   <!-- Core Tax & Accounting Services (Classy Grid) -->
-  <div class="container" id="services">
-    <section>
-      <div class="text-center">
-        <h2 class="section-title">Core Tax & Accounting Services</h2>
-        <p class="section-subhead">Comprehensive solutions tailored to your needs — from individuals to corporations, estates to private foundations.</p>
+  <div id="services">
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Tax Prep Services</h3>
+        <ul class="service-list">
+          <li><i class="fas fa-chevron-right"></i> Individual, Partnership & Corporate Taxes</li>
+          <li><i class="fas fa-chevron-right"></i> S-Corps</li>
+          <li><i class="fas fa-chevron-right"></i> Estates & Trusts</li>
+          <li><i class="fas fa-chevron-right"></i> Gift Tax</li>
+          <li><i class="fas fa-chevron-right"></i> Private Foundations</li>
+          <li><i class="fas fa-chevron-right"></i> Tax-Exempts</li>
+        </ul>
       </div>
-      <div class="services-grid">
-        <!-- Tax Prep Services -->
-        <div class="service-category">
-          <h3>Tax Prep Services</h3>
-          <ul class="service-list">
-            <li><i class="fas fa-chevron-right"></i> Individual, Partnership & Corporate Taxes</li>
-            <li><i class="fas fa-chevron-right"></i> S-Corps</li>
-            <li><i class="fas fa-chevron-right"></i> Estates & Trusts</li>
-            <li><i class="fas fa-chevron-right"></i> Gift Tax</li>
-            <li><i class="fas fa-chevron-right"></i> Private Foundations</li>
-            <li><i class="fas fa-chevron-right"></i> Tax-Exempts</li>
-          </ul>
-        </div>
-        <!-- Core Accounting Services -->
-        <div class="service-category">
-          <h3>Core Accounting Services</h3>
-          <ul class="service-list">
-            <li><i class="fas fa-chevron-right"></i> Tax Preparation & Representation</li>
-            <li><i class="fas fa-chevron-right"></i> Bookkeeping</li>
-            <li><i class="fas fa-chevron-right"></i> Tax Consulting</li>
-            <li><i class="fas fa-chevron-right"></i> Business Bookkeeping</li>
-            <li><i class="fas fa-chevron-right"></i> Business Payroll</li>
-            <li><i class="fas fa-chevron-right"></i> Buying & Selling Business</li>
-            <li><i class="fas fa-chevron-right"></i> Management Advisory</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- Service Request Form (Widget) -->
-  <div class="container" id="contact">
-    <section class="widget-section">
-      <h2 class="widget-title">Service Request</h2>
-      <div class="verification-form">
-        <form id="serviceRequestForm" onsubmit="handleFormSubmit(event)">
-          <label for="digits">Verification</label>
-          <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--gray);">Please enter any two digits with <strong>no</strong> spaces (Example: 12)*</p>
-          <input type="text" id="digits" name="digits" placeholder="12" maxlength="2" required>
-          <button type="submit" class="btn-submit">Submit</button>
-        </form>
-      </div>
-    </section>
-  </div>
-
-  <!-- Contact Info & Payment Section -->
-  <div class="container" id="payment">
-    <section style="border-bottom: none;">
-      <div class="about-grid" style="gap: 2rem;">
-        <div>
-          <h2 class="section-title">Make a Secure Payment</h2>
-          <p style="margin-top: 1rem; color: var(--gray);">We offer secure online payment options for your convenience. Please contact our office for details or to arrange a payment method that works best for you.</p>
-          <p style="margin-top: 1rem;"><i class="fas fa-lock" style="color: var(--gold);"></i> Your privacy and security are our priority.</p>
-          <a href="tel:2032401888" class="btn-outline" style="margin-top: 1rem;"><i class="fas fa-phone"></i> Call (203) 240-1888</a>
-        </div>
-        <div>
-          <h2 class="section-title">Office Location</h2>
-          <p style="margin-top: 1rem; color: var(--gray);"><strong>Shariff & Company, LLC</strong><br>
-          288 East Main Street<br>
-          Branford, CT 06405</p>
-          <p style="margin-top: 1rem;"><i class="fas fa-envelope"></i> <a href="mailto:teja@tejacpa.com" style="color: var(--navy);">teja@tejacpa.com</a><br>
-          <i class="fas fa-phone-alt"></i> (203) 240-1888<br>
-          <i class="fas fa-fax"></i> (203) 200-7130</p>
-        </div>
-      </div>
-    </section>
-  </div>
-</main>
-
-<footer>
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-info">
-        <h3>Shariff & Company, LLC</h3>
-        <p>Teja Shariff, CPA</p>
-        <p>288 East Main Street, Branford, CT 06405</p>
-        <p>Phone: (203) 240-1888 | Fax: (203) 200-7130</p>
-        <p>Email: teja@tejacpa.com</p>
-      </div>
-      <div class="footer-links">
-        <a href="#">Home</a>
-        <a href="#about">About the Firm</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-        <a href="#payment">Secure Payment</a>
+      <div class="service-card">
+        <h3>Core Accounting Services</h3>
+        <ul class="service-list">
+          <li><i class="fas fa-chevron-right"></i> Tax Preparation & Representation</li>
+          <li><i class="fas fa-chevron-right"></i> Bookkeeping</li>
+          <li><i class="fas fa-chevron-right"></i> Tax Consulting</li>
+          <li><i class="fas fa-chevron-right"></i> Business Bookkeeping</li>
+          <li><i class="fas fa-chevron-right"></i> Business Payroll</li>
+          <li><i class="fas fa-chevron-right"></i> Buying & Selling Business</li>
+          <li><i class="fas fa-chevron-right"></i> Management Advisory</li>
+        </ul>
       </div>
     </div>
-    <div class="footer-copyright">
-      Copyright © 2026 Shariff & Company, LLC — 288 East Main Street, Branford, CT 06405 — All Rights Reserved
+  </div>
+
+  <!-- Service Request Widget -->
+  <div class="widget-card" id="contact">
+    <h2 class="widget-title">Service Request</h2>
+    <div class="verification-form">
+      <form id="serviceRequestForm" onsubmit="handleFormSubmit(event)">
+        <label style="display: block; margin-bottom: 8px; font-weight: 500;">Verification</label>
+        <p style="font-size: 0.75rem; margin-bottom: 12px; color: #5e5e66;">Please enter any two digits with <strong>no</strong> spaces (Example: 12)*</p>
+        <input type="text" id="digits" placeholder="12" maxlength="2" required>
+        <button type="submit" class="btn-submit">Submit Request</button>
+      </form>
     </div>
+  </div>
+
+  <!-- Payment & Location Dual Panel -->
+  <div class="dual-panel">
+    <div class="panel">
+      <i class="fas fa-shield-alt" style="font-size: 2rem; color: #007aff;"></i>
+      <h2 style="margin: 0.5rem 0 0.75rem;">Make a Secure Payment</h2>
+      <p>We offer secure online payment options for your convenience. Click below to pay via our trusted portal.</p>
+      <button class="payment-btn" onclick="openPayment()"><i class="fab fa-paypal"></i> Pay with PayPal</button>
+    </div>
+    <div class="panel">
+      <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: #007aff;"></i>
+      <h2 style="margin: 0.5rem 0 0.75rem;">Office Location</h2>
+      <p><strong>Shariff & Company, LLC</strong><br>288 East Main Street<br>Branford, CT 06405</p>
+      <p style="margin-top: 1rem;"><i class="fas fa-phone-alt"></i> (203) 240-1888<br><i class="fas fa-fax"></i> (203) 200-7130<br><i class="fas fa-envelope"></i> <a href="mailto:teja@tejacpa.com" style="color: #007aff; text-decoration: none;">teja@tejacpa.com</a></p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer-glass">
+  <div class="footer-content">
+    <div>
+      <h3 style="font-weight: 600; margin-bottom: 8px;">Shariff & Company, LLC</h3>
+      <p>Teja Shariff, CPA</p>
+      <p>288 East Main Street, Branford, CT 06405</p>
+    </div>
+    <div>
+      <button class="nav-btn" style="background: rgba(255,255,255,0.1); color: white;" onclick="scrollToSection('home')">Home</button>
+      <button class="nav-btn" style="background: rgba(255,255,255,0.1); color: white;" onclick="scrollToSection('about')">About</button>
+      <button class="nav-btn" style="background: rgba(255,255,255,0.1); color: white;" onclick="scrollToSection('services')">Services</button>
+      <button class="nav-btn" style="background: rgba(255,255,255,0.1); color: white;" onclick="openPayment()">Secure Payment</button>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    Copyright © 2026 Shariff & Company, LLC — 288 East Main Street, Branford, CT 06405 — All Rights Reserved
   </div>
 </footer>
 
 <script>
+  function scrollToSection(id) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else if (id === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
+  function openPayment() {
+    window.open('https://www.paypal.com/webapps/shoppingcart?flowlogging_id=f83862521bb1d&mfid=1774864316516_f83862521bb1d#/checkout/openButton', '_blank');
+  }
+
   function handleFormSubmit(event) {
     event.preventDefault();
-    const digitsInput = document.getElementById('digits').value.trim();
+    const digits = document.getElementById('digits').value.trim();
     const digitsPattern = /^\d{2}$/;
-    if (!digitsPattern.test(digitsInput)) {
+    if (!digitsPattern.test(digits)) {
       alert('Please enter exactly two digits with no spaces (e.g., 12).');
       return;
     }
-    alert('Thank you for your service request. We will contact you shortly.');
+    alert('Thank you for your service request. Teja Shariff will contact you shortly.');
     document.getElementById('serviceRequestForm').reset();
   }
 
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href === "#" || href === "") return;
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
+  // Ensure images load from GitHub, fallback gracefully
+  const logoImg = document.querySelector('.logo-img img');
+  if (logoImg && logoImg.complete && logoImg.naturalWidth === 0) {
+    logoImg.src = 'https://placehold.co/48x48/1c3e3a/white?text=TS';
+  }
+  const tejaImg = document.querySelector('.photo-frame img');
+  if (tejaImg && tejaImg.complete && tejaImg.naturalWidth === 0) {
+    tejaImg.src = 'https://placehold.co/160x160/e9ecef/1c3e3a?text=Teja+Shariff';
+  }
 </script>
 </body>
 </html>
